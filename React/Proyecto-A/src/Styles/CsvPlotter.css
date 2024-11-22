@@ -1,0 +1,53 @@
+/* Estilos generales para el componente CsvPlotter */
+.csv-plotter {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .csv-plotter h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .csv-plotter p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para el input de carga de archivos */
+  .csv-plotter input[type="file"] {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .csv-plotter input[type="file"]:hover {
+    border-color: #007bff;
+  }
+  
+  /* Estilo para el mensaje de carga */
+  .loading-message {
+    color: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para la gráfica */
+  .react-plotly-graph {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  

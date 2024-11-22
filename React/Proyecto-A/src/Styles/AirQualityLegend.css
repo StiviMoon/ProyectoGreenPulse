@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.legend-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 25px;
+}
+
+.legend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 300px;
+  height: 150px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legend-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.legend-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; /* Por defecto, pero cambiará dinámicamente */
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.legend-content {
+  z-index: 2;
+  color: #000000;
+  font-size: medium;
+  text-align: center;
+  padding: 10px;
+}
+
+.legend-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.legend-description {
+  font-size: 0.9rem;
+}
+
+.legend-values {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .legend-item {
+    width: 300px;
+    height: 135px;
+  }
+
+  .legend-title {
+    font-size: 0.9rem;
+  }
+
+  .legend-description {
+    font-size: 0.8rem;
+  }
+
+  .legend-values {
+    font-size: 0.7rem;
+  }
+  .legend-container {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px;
+  }
+}

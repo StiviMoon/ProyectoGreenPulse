@@ -1,0 +1,24 @@
+
+/* Contenedor principal de la aplicación */
+.contenedor-app {
+    display: flex;
+    flex-direction: row; /* Organiza la sidebar y el contenido en una fila */
+  }
+
+/* Contenedor de las páginas */
+.contenedor-pages {
+    margin-left: 16.5%; /* Deja espacio equivalente al ancho de la sidebar */
+    padding: 5px; /* Margen interno para el contenido */
+    width: calc(100% - 20%); /* Ajusta el ancho para ocupar el espacio restante */
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+  }
+
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    
+    .contenedor-pages {
+      margin-left: 0; /* Elimina el margen izquierdo */
+      width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+  }

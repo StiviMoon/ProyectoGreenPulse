@@ -1,0 +1,157 @@
+/* Estilo principal de la sidebar */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(135deg, #cdff70, #1E5057); /* Degradado verde natural */
+  color: #ffffff;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  min-width: 250px; /* Ancho mínimo asegurado */
+  position: fixed; /* Mantiene la barra lateral fija */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  z-index: 1000; /* Asegura que la sidebar esté encima del contenido */
+}
+
+
+/* Efecto flotante al mostrar la sidebar */
+.sidebar.open:hover {
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor del logo */
+.contenedor-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen del logo */
+.img-logo {
+  width: 100%; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción del logo */
+  object-fit: contain; /* Evita deformaciones */
+  transition: all 0.3s ease;
+
+}
+
+
+/* Lista de navegación */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+/* Elemento de la lista */
+.sidebar li {
+  padding: 15px 25px;
+  margin: 10px 15px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar li:hover {
+  background: #DDD863;
+  transform: scale(1.05);
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar li.active {
+  background: #1E8E5F;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.sidebar li .icon {
+  margin-right: 15px;
+  font-size: 1.5rem;
+}
+
+/* Estilo general para los enlaces dentro de la sidebar */
+.sidebar a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Hereda el color del padre, en este caso blanco */
+  display: flex; /* Asegura que el enlace sea un contenedor flexible */
+  align-items: center; /* Centra verticalmente los iconos y el texto */
+  width: 100%; /* Ocupa todo el ancho del elemento padre */
+  transition: color 0.3s ease, transform 0.3s ease; /* Añade suavidad al hover */
+}
+
+.sidebar a:hover {
+  color: #ffffff; /* Cambia el color al pasar el cursor */
+  transform: scale(1.05); /* Da un ligero efecto de zoom */
+}
+
+
+/* Mostrar la sidebar en pantallas grandes */
+@media (min-width: 769px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(0); /* Siempre visible en pantallas grandes */
+  }
+}
+
+/* Ocultar la sidebar en pantallas pequeñas por defecto */
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+/* Mostrar la sidebar en pantallas pequeñas cuando esté abierta */
+.sidebar.open {
+  transform: translateX(0);
+  
+}
+
+/* Botón de menú (solo en pantallas pequeñas) */
+@media (max-width: 768px) {
+
+  .sidebar {
+    width: 60%;
+    position: fixed;
+    transform: translateX(0); /* Siempre visible en pantallas grandes */
+  }
+ 
+
+  .menu-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color:#ffffff;
+    background-color: #3BAE51;
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: #282845;
+    z-index: 1100;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+}

@@ -1,0 +1,132 @@
+/* Contenedor principal centrado */
+.padre-contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas */
+  gap: 1rem; /* Espaciado entre elementos */
+}
+
+/* Contenedor del monitor */
+.container {
+  padding: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem auto;
+}
+
+/* Encabezado */
+.header {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  border-bottom: 5px solid #295375;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+
+/* Contenedor de gráficos */
+.container-grafico {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste dinámico */
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  padding: 50px;
+}
+
+/* Botones */
+.contenedor-btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ajustar botones si hay varios */
+  gap: 1rem;
+  margin: 20px;
+}
+
+.btn-cambiar-grafico {
+  background-color: #76b84b;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cambiar-grafico:hover {
+  background-color: #60963d;
+  transform: scale(1.05);
+}
+
+.btn-cambiar-grafico:active {
+  transform: scale(0.98);
+}
+
+/* Resumen de calidad del aire */
+.air-quality-summary {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #131313;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #c8e6c9;
+  background-color: #f4f9f4;
+  box-shadow: 0 4px 8px rgba(187, 187, 187, 0.26);
+  transition: background-color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+
+/* Adaptabilidad para pantallas medianas */
+@media (min-width: 768px) {
+  .container {
+    padding: 3rem;
+  }
+
+  .header {
+    font-size: 2.2rem;
+  }
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 576px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .container-grafico {
+    grid-template-columns: 1fr; /* Gráficos en una sola columna */
+    gap: 1rem;
+  }
+
+  .btn-cambiar-grafico {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .air-quality-summary {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .legend-container {
+    font-size: 0.9rem;
+  }
+}
